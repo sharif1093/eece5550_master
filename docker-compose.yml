@@ -1,0 +1,41 @@
+version: '2.3'
+services:
+  devel:
+    container_name: eece5550_container
+    build:
+      context: ./deploy
+      args:
+        graphic: osmesa
+    # net: host
+    # ipc: host
+    environment:
+      DISPLAY: $DISPLAY
+      QT_X11_NO_MITSHM: 1
+    
+    # We need it at least for the /dev/shm
+    privileged: true
+    stdin_open: true
+    tty: true
+    working_dir: /workspace
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./workspace:/workspace
+      - homedir:/root
+      
+    command: /bin/bash      
+
+volumes:
+    homedir: {}
+
+
+
+    
+    
+    # --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+    # -env="XAUTHORITY=$XAUTH" \
+    # --volume="$XAUTH:$XAUTH" \
+    # --runtime=nvidia \
+
+
+    # graphic: nvidia | osmesa | ati | intel
+    
