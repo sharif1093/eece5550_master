@@ -29,3 +29,11 @@ sudo gpasswd -a $USER docker
 
 * Install docker-compose by following instruction for linux [here](https://docs.docker.com/compose/install/#install-compose).
 
+
+## Tips
+
+* When inside the docker, you will have a working version of ROS Kinetic with osmesa driver installed.
+* No changes in the files inside the docker will be preserved except changes done to the `/workspace` directory.
+* If you need any extra packages to be installed, you should modify `deploy/Dockerfile` and add the package to the end of the file.
+
+
