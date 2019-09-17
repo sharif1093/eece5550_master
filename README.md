@@ -19,7 +19,7 @@ docker-compose up --build
 
 ### Installing docker and docker-compose
 
-* Follow instructions in [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/) to install docker on your machine. You should have `Ubuntu 16.04` or `Ubuntu 18.04`. If you have Ubuntu 14.04 follow instruction [here](https://gist.github.com/katopz/7eb4d8c475ee61e18624f3787c33fc21) instead (not tested).
+* Follow instructions in [here](https://docs.docker.com/install/linux/docker-ce/ubuntu/) to install docker on your machine. You should have `Ubuntu 16.04` or `Ubuntu 18.04`. If you have Ubuntu 14.04 follow instruction [here](https://www.liquidweb.com/kb/how-to-install-docker-on-ubuntu-14-04-lts/) instead (not tested).
 * Add your user to the docker group:
 
 ```bash
